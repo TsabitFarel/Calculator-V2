@@ -17,9 +17,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Init the lateinit var variable
         textView = findViewById(R.id.txtResult)
     }
 
+    // Making the function to make the button clicked and displayed on the TextView
     fun operatorFunction(view: View) {
         when(view.id) {
             R.id.btnOne -> {
@@ -88,6 +90,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // Making the functions to make the code clean
     private fun numberClicked(numberClicked: Int) {
         val number = textView.text.toString() + numberClicked.toString()
         textView.text = number
